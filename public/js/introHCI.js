@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
 });
 
 /*
@@ -10,4 +11,12 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$('.likeBtn').click(clickLikeBtn);
+}
+
+function clickLikeBtn(e) {
+	e.preventDefault();
+	gtag('create', 'UA-XXXXX-Y', 'auto');
+	gtag("send", "event", 'like', 'click');
+
 }
