@@ -15,8 +15,12 @@ function initializePage() {
 }
 
 function clickLikeBtn(e) {
+
 	e.preventDefault();
-	gtag('create', 'UA-XXXXX-Y', 'auto');
-	gtag("send", "event", 'like', 'click');
+	
+	gtag('event', 'click', {
+  		'event_category': 'like'
+    });
+
 
 }
