@@ -18,9 +18,7 @@ function clickLikeBtn(e) {
 
 	e.preventDefault();
 	
-	gtag('event', 'click', {
-  		'event_category': 'like'
-    });
+	gtag('send', 'event', 'like', 'click');
 
 
 }
